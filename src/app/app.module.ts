@@ -12,7 +12,9 @@ import { StockManageComponent } from './stock/stock-manage/stock-manage.componen
 import { StarsComponent } from './stars/stars.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StockFormComponent } from './stock/stock-form/stock-form.component';
-
+import { StockService } from './stock/stock.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { StockPipe } from './stock/stock.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,13 +26,16 @@ import { StockFormComponent } from './stock/stock-form/stock-form.component';
     StockManageComponent,
     StarsComponent,
     DashboardComponent,
-    StockFormComponent
+    StockFormComponent,
+    StockPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [StockService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

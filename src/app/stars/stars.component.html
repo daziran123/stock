@@ -1,6 +1,7 @@
 
 <!-- <span class="glyphicon glyphicon-star">实心</span> -->
-<span *ngFor="let star of stars" class="glyphicon glyphicon-star" [class.glyphicon-star-empty]="star"></span>
+<span *ngFor="let star of stars; let i =index;" class="glyphicon glyphicon-star" [class.glyphicon-star-empty]="star" 
+(click)="clickStar(i)"></span>
  
 <!-- [class.glyphicon-star-empty]="star">当star 是true得时候，会增加  这个属性样式
 即 class="glyphicon glyphicon-star glyphicon-star-empty" -->
